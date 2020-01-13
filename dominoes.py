@@ -10,4 +10,4 @@ all_Dominoes = [] #Todas las fichas
 for i in range(7):
     for l in range(7):
         c = Domino(i, l)
-        all_Dominoes.append(c.dominoFace)
+        all_Dominoes.append([c.dominoFace])
