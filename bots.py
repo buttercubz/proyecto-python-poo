@@ -22,6 +22,6 @@ class bots(object):
         #if canTakeToken:
      
 player = bots("juan") 
-player.takeFicha(all_Dominoes)
+player.takeFicha(all_Dominoes) 
 
 
