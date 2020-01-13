@@ -38,3 +38,5 @@ while True:
 
 
 # print(cadena)
+
+# puto el que lo lea
