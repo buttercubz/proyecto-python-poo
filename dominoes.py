@@ -8,7 +8,7 @@ class Domino():
 
 all_Dominoes = [] # Todas las fichas
 
-# Algoritmo que crea las piezas de dominos
+
 for i in range(7):
     for l in range(7):
         c = Domino(i, l)
@@ -38,3 +38,5 @@ all_Dominoes.remove("4|6")
 all_Dominoes.remove("5|6")
 
 random.shuffle(all_Dominoes)
+
+print(all_Dominoes)
