@@ -13,15 +13,14 @@ class Table:
     def show_dominoes(self, test = False):
         if test:#el parametro test es para desplegar todo el domino
             for j in self.tokens:
-                print(j[:7])
+                print(j)
         for i in self.empty:
             self.data = self.cache.join(self.empty)
         print(self.data)
-    def get_hand(self):
-        return self.data
     def append_tokens(self, tokens_per_players, place):
         if place == 2:
             self.empty.append(tokens_per_players)
+            os.system('clear') 
             return self.empty
         elif place == 1:
             self.empty.insert(0, tokens_per_players)
@@ -36,7 +35,7 @@ conteo = 0
 while True:
     nueva_mesa.append_tokens(input('choose your dominoes: '), int(input('choose your place: ')))
     nueva_mesa.show_dominoes()
-    print(nueva_mesa.return_points())
+    print(nueva_mesa.return_points(True))
     conteo += 1
     if conteo >= 4:
         break
