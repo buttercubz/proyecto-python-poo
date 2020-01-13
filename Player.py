@@ -7,15 +7,14 @@ class Player(object):
         
     def take_hand(self,tokens,tokens_per_player = 7): #tomas las fichas para la mano del jugador
         for _ in range(tokens_per_player):
-            self.hand.append(all_Dominoes)
-            
+            self.hand.append(all_Dominoes.pop())
+        return self
+    
     def show_hand(self): #muestra la mano del jugador 
-        print ("{}'s hand".format(self.name))
-        for c in self.hand:
-            print("{}".format(self.hand))
+        print(self.hand)
 
         
-player = Player('rivier') 
+player = Player(input('introduce your name here: ')) 
 player.take_hand(all_Dominoes)
 player.show_hand()
-  
+
