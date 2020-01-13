@@ -5,7 +5,7 @@ class Domino():
         self.dominoFace = str(dominoFace1) + " | " + str(dominoFace2) #la ficha completa
         self.value = dominoFace1 + dominoFace2 #el valor de la ficha
 
-All_Dominoes = [] #Todas las fichas
+all_Dominoes = [] #Todas las fichas
 
 for i in range(7):
     for l in range(7):
