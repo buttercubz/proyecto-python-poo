@@ -13,28 +13,17 @@ class Table:
                 self.data = self.cache.join(self.empty)
             print(self.data)
     def get_hand(self):
-        return type(self.data)
+        return self.data
     def append_tokens(self, tokens_per_players, place):
         if place == 2:
             self.empty.append(tokens_per_players)
             return self.empty
         elif place == 1:
             self.empty.insert(0, tokens_per_players)
+            os.system('clear')
             return self.empty
-        print(self.empty)
-    def get_points(self, hand):
-        first_step = hand.replace("-", "+")
-        return first_step
 
 nueva_mesa = Table(all_Dominoes)
 while True:
     nueva_mesa.append_tokens(input('choose your dominoes: '), int(input('choose your place: ')))
-    os.system('clear')
     nueva_mesa.show_dominoes()
-    print(nueva_mesa.get_points(nueva_mesa.get_hand()))
-
-# a=['hola' , 'estoy' , 'haciendo' , 'un' , 'programa']
-# cadena = " ".join(a)
-
-
-# print(cadena)
