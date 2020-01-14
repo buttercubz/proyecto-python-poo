@@ -25,7 +25,7 @@ class Domino():
 
 all_Dominoes = [] # Todas las fichas
 
-# Algoritmo que crea las piezas de dominos
+# Bucle que se encarga de rellenar el arreglo vacio.
 for i in range(7):
     for l in range(7):
         c = Domino(i, l)
