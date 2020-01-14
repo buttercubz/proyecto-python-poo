@@ -35,7 +35,7 @@ conteo = 0
 while True:
     nueva_mesa.append_tokens(input('choose your dominoes: '), int(input('choose your place: ')))
     nueva_mesa.show_dominoes()
-    print(nueva_mesa.return_points(True))
+    print(nueva_mesa.return_points())
     conteo += 1
     if conteo >= 4:
         break
