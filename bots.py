@@ -1,27 +1,25 @@
 from dominoes import all_Dominoes
-
+#from mesa import Table
 class bots(object):
-    def __int__(self,name):
-        self.Hand = []
+    def __init__(self,name):
+        self.hand = []
         self.name = name
         
-    def takeFicha(self,tokens,tokens_per_player = 7): #tomas las fichas para la mano del jugador
-        for _ in range(tokens_per_player):
-            self.Hand.append(tokens.pop())
-        return self
+    def take_hand(self,tokens,tokens_per_player = 7): 
+        for i in range(tokens_per_player):
+            self.hand.append(tokens.pop())
+    def game(self):
+        posit = str(input("Que ficha quieres jugar: "))
+        self.hand.remove(posit)
     
-
-    def game(self, Hand):#juega una ficha de la que tiene en su mano
-        pass
-
-    def show(self):#muetra las fichas que tiene
-        print(self.Hand)
-
-    def takeFichaTable(self):#toma una ficha de la mesa cuando no tiene una para jugar
-        pass
-        #if canTakeToken:
-     
-player = bots("juan") 
-player.takeFicha(all_Dominoes) 
+    def show_hand(self): 
+        print(self.hand,"\n") 
 
 
+Bot = bots("juancito") 
+Bot.take_hand(all_Dominoes) 
+while True:    
+    print("Estas son tus fichas")      
+    Bot.show_hand()
+    Bot.game()
+    
