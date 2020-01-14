@@ -27,22 +27,7 @@ class Table:
             os.system('clear')
             return self.empty
     def return_points(self):
-<<<<<<< HEAD
         self.points = self.data.replace('-', '+').replace(' ', '+')
         return eval(self.points)
 
 nueva_mesa = Table(all_Dominoes)
-conteo = 0
-while True:
-    nueva_mesa.append_tokens(input('choose your dominoes: '), int(input('choose your place: ')))
-    nueva_mesa.show_dominoes()
-    print(nueva_mesa.return_points())
-    conteo += 1
-    if conteo >= 4:
-        break
-=======
-        self.points = self.data.replace('|', '+').replace(' ', '+')
-        print(eval(self.points))
-        return self.points
-mesa = Table(all_Dominoes)
->>>>>>> 9c32254d28d9283d421dd3f975c46a52fec1de9d
