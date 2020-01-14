@@ -1,25 +1,39 @@
 from dominoes import all_Dominoes
 from mesa import mesa
 from Player import Player
-from bots import bots
+# from bots import bots
 jugadores = []
 while True:
     jugadores.append(input('nombre 1: '))
     jugadores.append(input('nombre 2: '))
-    # jugadores.append(input('nombre 3: '))
-    # jugadores.append(input('nombre 4: '))
+    jugadores.append(input('nombre 3: '))
+    jugadores.append(input('nombre 4: '))
     break
-nuevo_jugador = Player('')
-nuevo_bot = bots('')
-nuevo_jugador.take_hand(all_Dominoes)
-nuevo_bot.take_hand(all_Dominoes)
+jugador1 = Player('')
+jugador2 = Player('')
+jugador3 = Player('')
+jugador4 = Player('')
+
+jugador1.take_hand(all_Dominoes)
+jugador2.take_hand(all_Dominoes)
+jugador3.take_hand(all_Dominoes)
+jugador4.take_hand(all_Dominoes)
 
 while True:
     print(jugadores[0])
-    nuevo_jugador.show_hand()
-    nuevo_jugador.discard_cards()
+    jugador1.show_hand()
+    jugador1.discard_cards()
     mesa.show_dominoes()
     print(jugadores[1])
-    nuevo_bot.show_hand()
-    nuevo_bot.game()
+    jugador2.show_hand()
+    jugador2.discard_cards()
     mesa.show_dominoes()
+    print(jugadores[2])
+    jugador3.show_hand()
+    jugador3.discard_cards()
+    mesa.show_dominoes()
+    print(jugadores[3])
+    jugador4.show_hand()
+    jugador4.discard_cards()
+    mesa.show_dominoes()
+    break
