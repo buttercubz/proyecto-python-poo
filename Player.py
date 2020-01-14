@@ -1,5 +1,5 @@
 from dominoes import all_Dominoes
-from mesa import mesa , os
+from mesa import mesa, os
 class Player(object):
     def __init__(self,name):
         self.hand = []
@@ -15,4 +15,4 @@ class Player(object):
         z = int(input('Choose one to put in table: '))
         for i in range(8):
             if z == i:
-                mesa.append_tokens(self.hand.pop(i - 1), int(input('choose your place: ')))
+                mesa.append_tokens(self.hand.pop(i - 1), int(input('choose your place: ')), input('do you want to rotate this tab: yes or no '))
