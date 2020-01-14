@@ -15,4 +15,9 @@ class Player(object):
         z = int(input('Choose one to put in table: '))
         for i in range(8):
             if z == i:
-                mesa.append_tokens(self.hand.pop(i - 1), int(input('choose your place: ')), input('do you want to rotate this tab: yes or no '))
+                mesa.append_tokens(self.hand.pop(i - 1), int(input('choose your place: ')))
+            elif z > len(self.hand):
+                print("Buen caballo esa ficha no se puede \n estas son tus fichas")
+                self.show_hand()
+                self.discard_cards()
+                break
