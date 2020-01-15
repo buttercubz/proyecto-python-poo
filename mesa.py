@@ -1,4 +1,5 @@
 from dominoes import all_Dominoes
+from playsound import playsound
 import os
 import time
 class Table:
@@ -10,8 +11,8 @@ class Table:
         self.data = None
         self.points = 0
         self.place = None
+        playsound('./music/baraje2.mp3')
         print('.....................................Dominoes.............................................')
-        time.sleep(3)
         os.system('clear')
 #   show dominoes desplega todos los dominos en la mesa
     def show_dominoes(self, test = False):
@@ -31,19 +32,23 @@ class Table:
         if place == 2:
             if reverse == 'yes':
                 self.empty.append(tokens_per_players[::-1])
+                playsound('./music/golpe.mp3')
                 os.system('clear')
                 return self.empty
             else:
                 self.empty.append(tokens_per_players)
+                playsound('./music/golpe.mp3')
                 os.system('clear')
                 return self.empty
         elif place == 1:
             if reverse == 'yes':
                 self.empty.insert(0,tokens_per_players[::-1])
+                playsound('./music/golpe.mp3')
                 os.system('clear')
                 return self.empty
             else:
                 self.empty.insert(0, tokens_per_players)
+                playsound('./music/golpe.mp3')
                 os.system('clear')
                 return self.empty
     def return_points(self):
