@@ -1,7 +1,6 @@
 from dominoes import all_Dominoes
 from playsound import playsound
 import os
-import time
 class Table:
     #   tokens son las fichas de domino
     def __init__(self, tokens):
