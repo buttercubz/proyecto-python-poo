@@ -36,4 +36,3 @@ while True:
     jugador4.show_hand()
     jugador4.discard_cards()
     mesa.show_dominoes()
-    print(type(mesa.return_points()), mesa.return_points())

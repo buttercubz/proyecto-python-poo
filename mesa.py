@@ -15,10 +15,15 @@ class Table:
             for j in self.tokens:
                 print(j)
         for i in self.empty:
-            self.data = self.cache.join(self.empty)
+            self.data = self.cache.join(self.empty).replace('.', '')
+        os.system('clear')
         print(self.data)
     def append_tokens(self, tokens_per_players, place, reverse):
         self.place = place
+        if tokens_per_players == 'pass' and place == None and reverse == None:
+            self.empty.append('.')
+            os.system('clear')
+            return ''
         if place == 2:
             if reverse == 'yes':
                 self.empty.append(tokens_per_players[::-1])
@@ -38,7 +43,7 @@ class Table:
                 os.system('clear')
                 return self.empty
     def return_points(self):
-        self.points = self.data.replace('|', '+').replace(' ', '+')
+        self.points = self.data.replace('|', '+').replace(' ', '+').replace('.', '')
         points = eval(self.points)
         return int(points)
 

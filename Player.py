@@ -12,18 +12,22 @@ class Player:
     def show_hand(self): #muestra la mano del jugador
         print(self.hand)
     def discard_cards(self):
-        z = int(input('Choose one to put in table: '))
-        for i in range(8):
-            if z == i:
-                mesa.append_tokens(self.hand.pop(i - 1), int(input('choose your place: ')), input('do you want to rotate this tab "yes" or "no": '))
-            elif z > len(self.hand):
-                if len(self.hand) <= 0:
-                    os.system('clear')
-                    print(f'{self.name} gano la partida con {168 - mesa.return_points()} puntos')
-                    break
-                else:
-                    mesa.show_dominoes()
-                    print("Buen caballo esa ficha no se puede \n estas son tus fichas")
-                    self.show_hand()
-                    self.discard_cards()
-                    break
+        z = input('Choose one to put in table, "if you want to pass the hand write pass": ')
+        if z == 'pass':
+            mesa.append_tokens('', None, None)
+        else:
+            z = int(z)
+            for i in range(8):
+                if z == i:
+                    mesa.append_tokens(self.hand.pop(i - 1), int(input('choose your place, "if you want to pass the hand write pass": ')), input('do you want to rotate this tab "yes" or "no": '))
+                elif z > len(self.hand):
+                    if len(self.hand) <= 0:
+                        os.system('clear')
+                        print(f'{self.name} gano la partida con {168 - mesa.return_points()} puntos')
+                        break
+                    else:
+                        mesa.show_dominoes()
+                        print("Buen caballo esa ficha no se puede \n estas son tus fichas")
+                        self.show_hand()
+                        self.discard_cards()
+                        break
