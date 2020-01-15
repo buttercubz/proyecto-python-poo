@@ -1,6 +1,6 @@
 from dominoes import all_Dominoes
 from mesa import mesa, os
-class Player(object):
+class Player:
     def __init__(self,name):
         self.hand = []
         self.name = name
@@ -15,9 +15,15 @@ class Player(object):
         z = int(input('Choose one to put in table: '))
         for i in range(8):
             if z == i:
-                mesa.append_tokens(self.hand.pop(i - 1), int(input('choose your place: ')))
+                mesa.append_tokens(self.hand.pop(i - 1), int(input('choose your place: ')), input('do you want to rotate this tab "yes" or "no": '))
             elif z > len(self.hand):
-                print("Buen caballo esa ficha no se puede \n estas son tus fichas")
-                self.show_hand()
-                self.discard_cards()
-                break
+                if len(self.hand) <= 0:
+                    os.system('clear')
+                    print(f'{self.name} gano la partida con {168 - mesa.return_points()} puntos')
+                    break
+                else:
+                    mesa.show_dominoes()
+                    print("Buen caballo esa ficha no se puede \n estas son tus fichas")
+                    self.show_hand()
+                    self.discard_cards()
+                    break

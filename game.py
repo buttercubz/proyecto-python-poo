@@ -9,10 +9,10 @@ while True:
     jugadores.append(input('nombre 3: '))
     jugadores.append(input('nombre 4: '))
     break
-jugador1 = Player('')
-jugador2 = Player('')
-jugador3 = Player('')
-jugador4 = Player('')
+jugador1 = Player(jugadores[0])
+jugador2 = Player(jugadores[1])
+jugador3 = Player(jugadores[2])
+jugador4 = Player(jugadores[3])
 
 jugador1.take_hand(all_Dominoes)
 jugador2.take_hand(all_Dominoes)
@@ -36,4 +36,4 @@ while True:
     jugador4.show_hand()
     jugador4.discard_cards()
     mesa.show_dominoes()
-    break
+    print(type(mesa.return_points()), mesa.return_points())

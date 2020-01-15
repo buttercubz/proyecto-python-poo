@@ -8,7 +8,7 @@ class Table:
         self.cache = ' '
         self.data = None
         self.points = 0
-        self.dominoes_points = 168
+        self.place = None
 #   show dominoes desplega todos los dominos en la mesa
     def show_dominoes(self, test = False):
         if test:#el parametro test es para desplegar todo el domino
@@ -18,24 +18,28 @@ class Table:
             self.data = self.cache.join(self.empty)
         print(self.data)
     def append_tokens(self, tokens_per_players, place, reverse):
+        self.place = place
         if place == 2:
             if reverse == 'yes':
                 self.empty.append(tokens_per_players[::-1])
                 os.system('clear')
+                return self.empty
             else:
-                self.empty.append(tokens_per_players[::-1])
+                self.empty.append(tokens_per_players)
                 os.system('clear')
-            return self.empty
+                return self.empty
         elif place == 1:
             if reverse == 'yes':
-                self.empty.append(tokens_per_players[::-1])
+                self.empty.insert(0,tokens_per_players[::-1])
                 os.system('clear')
+                return self.empty
             else:
                 self.empty.insert(0, tokens_per_players)
                 os.system('clear')
-            return self.empty
+                return self.empty
     def return_points(self):
-        self.points = self.data.replace('-', '+').replace(' ', '+')
-        return eval(self.points)
+        self.points = self.data.replace('|', '+').replace(' ', '+')
+        points = eval(self.points)
+        return int(points)
 
 mesa = Table(all_Dominoes)
