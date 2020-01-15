@@ -40,7 +40,7 @@ def start():
         jugador4.discard_cards()
         mesa.show_dominoes()
 def music():
-    playsound('./music/CLASICO DE MARINO PEREZ MIX 1 COMPLETO..mp3')
+    playsound('./music/Bachata.mp3')
 thread1 = threading.Thread(target=start)
 thread2 = threading.Thread(target=music)
 
