@@ -1,3 +1,9 @@
+from pygame import mixer
+
+mixer.init()
+mixer.music.load("C:/Users/Rudofl/Music/Música/Tones and I - Dance Monkey(Lyrics).mp3")
+mixer.music.play()
+
 from dominoes import all_Dominoes
 from mesa import mesa
 from Player import Player
