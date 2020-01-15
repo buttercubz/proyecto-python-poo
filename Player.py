@@ -32,4 +32,4 @@ class Player:
                         self.discard_cards()
                         break
         except:
-            print('mamaguevo')
+            print('None')

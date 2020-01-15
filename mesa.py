@@ -1,5 +1,6 @@
 from dominoes import all_Dominoes
 import os
+import time
 class Table:
     #   tokens son las fichas de domino
     def __init__(self, tokens):
@@ -9,6 +10,9 @@ class Table:
         self.data = None
         self.points = 0
         self.place = None
+        print('.....................................Dominoes.............................................')
+        time.sleep(3)
+        os.system('clear')
 #   show dominoes desplega todos los dominos en la mesa
     def show_dominoes(self, test = False):
         if test:#el parametro test es para desplegar todo el domino
