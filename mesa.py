@@ -1,9 +1,10 @@
 from dominoes import all_Dominoes
 from playsound import playsound
 import os
+import time
 class Table:
     #   tokens son las fichas de domino
-    def __init__(self, tokens):
+    def __init__(self,tokens):
         self.tokens = tokens
         self.empty = []
         self.cache = ' '
@@ -11,8 +12,9 @@ class Table:
         self.points = 0
         self.place = None
         playsound('./music/baraje2.mp3')
-        print('.....................................Dominoes.............................................')
-        print('..................[Erick].......[Rivier]......[Gil]......[starling].......................')
+        print('.....................................Dominoes..............................................')
+        print('................[Erick].......[Rivier].......[Gil]......[starling]......©2020..............')
+        print('.......................................©2020...............................................')
         os.system('clear')
 #   show dominoes desplega todos los dominos en la mesa
     def show_dominoes(self, test = False):
