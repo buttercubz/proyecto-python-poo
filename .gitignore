@@ -6,3 +6,7 @@ wtl.js
 index.html
 .gitignore
 *.mp3
+music
+get-pip.py
+build
+exe.py

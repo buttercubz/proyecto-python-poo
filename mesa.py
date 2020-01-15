@@ -13,6 +13,7 @@ class Table:
         self.place = None
         playsound('./music/baraje2.mp3')
         print('.....................................Dominoes.............................................')
+        print('..................[Erick].......[Rivier]......[Gil]......[starling].......................')
         os.system('clear')
 #   show dominoes desplega todos los dominos en la mesa
     def show_dominoes(self, test = False):
