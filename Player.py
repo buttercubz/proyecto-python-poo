@@ -15,7 +15,7 @@ class Player:
         z = input('Choose one to put in table, "if you want to pass the hand write pass": ')
         if z == 'pass':
             mesa.append_tokens('', None, None)
-        else:
+        try:
             z = int(z)
             for i in range(8):
                 if z == i:
@@ -31,3 +31,5 @@ class Player:
                         self.show_hand()
                         self.discard_cards()
                         break
+        except:
+            print('mamaguevo')
